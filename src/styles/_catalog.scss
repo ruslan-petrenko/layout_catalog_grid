@@ -1,6 +1,9 @@
+:root {
+  --column-amount: 4;
+}
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(var(--column-amount), 200px);
   gap: 48px;
 
   max-width: 944px;
@@ -8,17 +11,17 @@
 
   @media (max-width: 1024px) {
 
-    grid-template-columns: repeat(3, 200px);
+    --column-amount: 3;
   }
 
   @media (max-width: 768px) {
 
-    grid-template-columns: repeat(2, 200px);
+    --column-amount: 2;
   }
 
   @media (max-width: 488px) {
 
-    grid-template-columns: 200px;
+    --column-amount: 1;
   }
 
   &__card {
